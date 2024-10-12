@@ -12,7 +12,7 @@ server.use(express.urlencoded({extended:true}));
 server.use(express.json());
 server.use(cookieParser());
 server.use(cors({
-    origin: 'http://localhost:5174',
+    origin: 'http://localhost:5173',
     credentials: true,
 }))
 
