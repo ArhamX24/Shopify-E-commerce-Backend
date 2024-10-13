@@ -61,7 +61,7 @@ const logout = (req,res) => {
     return res.status(401).json({result: false, message: "Unauthorized"})
   }else{
     try{
-      return res.clearCookie("Token").send({result: true, message: "Logout Successfully"})
+      return res.clearCookie("Token", cookieOptions).send({result: true, message: "Logout Successfully"})
 
     }catch(err){
       res.status(500).send({result: false, message: err.message})
